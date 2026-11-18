@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>XXIV Уральское археологическое совещание — Пермь, 2028</title>
+    <meta name="description" content="XXIV Уральское археологическое совещание «Археология Урала на пути междисциплинарных исследований в XXI веке», г. Пермь, 2028" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      // Убирает место под логотип, если файла нет, и весь ряд, если не осталось ни одного логотипа
+      function hideLogo(img) {
+        var row = img.closest('.partners');
+        img.parentElement.remove();
+        if (!row.querySelector('.partner')) row.remove();
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Шапка -->
+    <header class="header">
+      <div class="container header__inner">
+        <span class="header__logo">XXIV Уральское археологическое совещание</span>
+        <nav class="header__nav" aria-label="Разделы">
+          <a href="#documents">Документы</a>
+          <a href="#registration">Регистрация</a>
+          <a href="#partners">Организаторы</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Первый экран -->
+      <section class="hero">
+        <div class="container">
+          <p class="hero__eyebrow">г. Пермь · 2028</p>
+          <h1 class="hero__title">XXIV Уральское археологическое совещание</h1>
+          <p class="hero__theme">
+            «Археология Урала на пути междисциплинарных исследований в XXI веке»
+          </p>
+          <div class="hero__actions">
+            <!-- Ссылку на форму регистрации вставить в href -->
+            <a class="btn btn--primary" href="#">Регистрация участников с докладом</a>
+            <a class="btn" href="#documents">Документы совещания</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Документы -->
+      <section class="section" id="documents">
+        <div class="container">
+          <h2 class="section__title">Документы совещания</h2>
+          <!-- Ссылки на документы вставить в href -->
+          <ul class="docs">
+            <li>
+              <a class="doc" href="#">
+                <span class="doc__num">01</span>
+                <span class="doc__label">Информационное письмо</span>
+                <span class="doc__arrow" aria-hidden="true">→</span>
+              </a>
+            </li>
+            <li>
+              <a class="doc" href="#">
+                <span class="doc__num">02</span>
+                <span class="doc__label">Требования к публикации и контакты для отправки статей</span>
+                <span class="doc__arrow" aria-hidden="true">→</span>
+              </a>
+            </li>
+            <li>
+              <a class="doc" href="#">
+                <span class="doc__num">03</span>
+                <span class="doc__label">Мероприятия совещания по дням</span>
+                <span class="doc__arrow" aria-hidden="true">→</span>
+              </a>
+            </li>
+            <li>
+              <a class="doc" href="#">
+                <span class="doc__num">04</span>
+                <span class="doc__label">Контакты организаторов совещания</span>
+                <span class="doc__arrow" aria-hidden="true">→</span>
+              </a>
+            </li>
+            <li>
+              <a class="doc" href="#">
+                <span class="doc__num">05</span>
+                <span class="doc__label">Программа совещания</span>
+                <span class="doc__arrow" aria-hidden="true">→</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Регистрация -->
+      <section class="section section--surface" id="registration">
+        <div class="container registration">
+          <div>
+            <h2 class="section__title">Регистрация</h2>
+            <p class="registration__text">
+              Для участия в совещании с докладом заполните форму регистрации.
+            </p>
+          </div>
+          <!-- Ссылку на форму регистрации вставить в href -->
+          <a class="btn btn--primary btn--large" href="#">Регистрация участников с докладом</a>
+        </div>
+      </section>
+
+      <!-- Организаторы и партнёры -->
+      <section class="section" id="partners">
+        <div class="container">
+          <h2 class="section__title">Организаторы</h2>
+          <ul class="organizers">
+            <li>Пермский государственный гуманитарно-педагогический университет</li>
+            <li>Пермский федеральный исследовательский центр УрО РАН</li>
+            <li>Пермский государственный национальный исследовательский университет</li>
+          </ul>
+
+          <!--
+            Логотипы организаторов. Положите файлы в папку images/ с такими именами:
+              images/pspu.png    — ПГГПУ
+              images/permsc.png  — ПФИЦ УрО РАН
+              images/psu.png     — ПГНИУ
+            Подойдут .png с прозрачным фоном. Если файла нет, его место на странице не показывается.
+          -->
+          <div class="partners">
+            <div class="partner"><img src="images/pspu.png" alt="Пермский государственный гуманитарно-педагогический университет" onerror="hideLogo(this)" /></div>
+            <div class="partner"><img src="images/permsc.png" alt="Пермский федеральный исследовательский центр УрО РАН" onerror="hideLogo(this)" /></div>
+            <div class="partner"><img src="images/psu.png" alt="Пермский государственный национальный исследовательский университет" onerror="hideLogo(this)" /></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <span>XXIV Уральское археологическое совещание</span>
+        <span>г. Пермь · 2028</span>
+      </div>
+    </footer>
+  </body>
+</html>
